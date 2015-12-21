@@ -1,10 +1,10 @@
 == Description
 
-This document will describe how to update OpenStack Platform director (OSPd) and OpenStack Puppet Modules (OPM) to support deploying RadosGW (RGW) functionality on OSP7 controller. OPSd on deployment server needs to be updated support deloying RGW fuctionality. OPM on the contollers needs to be update to support configuring RGW support 
+This document will describe how to update OpenStack Platform director (OSPd) and OpenStack Puppet Modules (OPM) to support deploying RadosGW (RGW) functionality on OSP7 controller. OPSd on deployment server needs to be updated support deploying RGW functionality. OPM on the contollers needs to be update to support configuring RGW support 
 
 IMPORTANT: These patches are going through upstream validation and integration. They are certain to change from what is documented below. 
 
-== OpenStack Platform Director updates
+== OpenStack Platform Director Updates
 
 === overcloud_controller_pacemaker.pp
 
@@ -21,7 +21,7 @@ The overcloud_controller_paceker.pp file requires patching before the "openstack
    }
  
    if str2bool(hiera('enable_ceph_storage', 'false')) {
-@@ -1610,6 +1611,15 @@
+@@ -1610,6 +1611,15 @@R
  
    }
  
@@ -78,7 +78,7 @@ Three puppet files on the controllers need to be patched before the overcloud co
 
 === manifests/rgw.pp
 
-The manifests/rgw.pp file needs to be patched to support optionally configuring RGw to use civetweb. 
+The manifests/rgw.pp file needs to be patched to support optionally configuring RGW to use civetweb. 
 
 ----
 --- rgw.pp.ORIG	2015-12-21 15:58:49.427463955 -0500
