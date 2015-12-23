@@ -43,7 +43,7 @@ The overcloud_controller_paceker.pp file requires patching before the "openstack
 The following example command line can be used to patch the overcloud_controller_pacemaker.pp file
 
 ----
-patch /home/stack/templates/openstack-tripleo-heat-templates/puppet/manifests/overcloud_controller_pacemaker.pp /pub/projects/rhos/kilo/scripts/kschinck/overcloud_controller_pacemaker.pp.patch
+$ patch /home/stack/templates/openstack-tripleo-heat-templates/puppet/manifests/overcloud_controller_pacemaker.pp /pub/projects/rhos/kilo/scripts/kschinck/overcloud_controller_pacemaker.pp.patch
 ----
 
 === ceph.yaml
@@ -67,7 +67,7 @@ The ceph.yaml file requires patching to add the needed puppet variables.
 The following example command line can be used to patch the ceph.yaml file
 
 ----
-patch /home/stack/templates/openstack-tripleo-heat-templates/puppet/hieradata/ceph.yaml /pub/projects/rhos/kilo/scripts/kschinck/ceph.yaml.patch
+$ patch /home/stack/templates/openstack-tripleo-heat-templates/puppet/hieradata/ceph.yaml /pub/projects/rhos/kilo/scripts/kschinck/ceph.yaml.patch
 ----
 
 
